@@ -16,7 +16,7 @@ __Purpose:__ PDBParser is a quick python scrpt to take in a Protein Database fil
 [dl]: http://www.psicode.org
 
 
-__Syntax: __ python pdbparser.py ~/Location/inputFile.pdb PARAMETER1 PARAMETER2
+__Syntax:__ python pdbparser.py ~/Location/inputFile.pdb PARAMETER1 PARAMETER2
 
 * Replace Location with location of PDB file
 
