@@ -1,17 +1,3 @@
-"""
-Purpose: To parse a PDB file for any number of parameters and output into a xyz file
-
-Syntax: python pdbparser.py ~/Location/inputFile.pdb PARAMETER1 PARAMETER2
-    *Replace Location with location of PDB file
-    *Parameters can only be positional such as "344" for "ATOM 344" in PDB format
-
-Output: A xyz file compatible with Psi 4. The filename is editable within the 
-      the script. The comments line will show all arguments for that file.
-
-Written by: Connor Fourt
-Last Updated: Dec 3 2013
-Written: Nov 13 2013
-"""
 from __future__ import print_function
 from sys import argv 
 import re
