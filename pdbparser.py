@@ -4,6 +4,7 @@ import re
 
 #taking in arguments and assigning them to i
 i = argv
+
 #making filenames
 inputFileName = i[1]
 outputFileName =inputFileName[:-3] + "xyz"
@@ -18,13 +19,13 @@ if len(userInput) > 1: # and userInput[-4:] == ".xyz":
 f = open(inputFileName, 'r')
 g = open(outputFileName, 'w')
 
-#programatic sugar
+#display sugar
 print ('Reading:', inputFileName)
 print ('Writing to: ', outputFileName)
 print ( len(i)-2, "arguments taken in" )
 
 
-#Adding arguments taken in as comment
+#Adding file name and arguments-taken-in as comment
 g.write(i[1] + " ")
 g.write("Arguments: ")
 for argument in i[2:]:
@@ -41,14 +42,14 @@ for argument in i[2:]:
     for argument in i[2:]:
       searchterm = "ATOM" + " "*(7-len(argument)) + argument
       if line.find(searchterm) != -1:
-        #regular expression to find the xyz syntax
+        #regular expression to populate the xyz syntax
         mainData = re.search(r'-?\d+\.\d+\s+-?\d+\.\d+\s+-?\d+\.\d+\s+', line)
         letter = re.search(r'(\w+\s)\s*$', line)
         lineToWrite = letter.group(1) + mainData.group() + "\n"
         g.write(lineToWrite)
         lineCount = lineCount + 1
 
-#Prepending header text to destination file
+#Prepending header text (number of atoms found) to destination file
 g.close()
 g = open(outputFileName, 'r')
 temp = g.read()
