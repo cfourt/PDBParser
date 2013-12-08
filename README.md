@@ -1,14 +1,19 @@
 PDBParser
 =========
 Written: Connor Fourt
+
 Updated: December 8th 2013
+
+Use? Yes. MIT License
 
 ###TL;DR: PDB in, XYZ out for some atoms in a protein.###
 
-This is a simple script in python that reads in a PDB (Protein Database) file and outputs the positional data of specific atoms within a protein.
+Purpose: PDBParser is a quick python scrpt to take in a Protein Database file
+      and several parameters and output their positional data in an xyz file. 
+    *The parameters are the atom number within the molecule
+    *XYZ file is for use in [Psi4][dl]
+[dl]: http://www.psicode.org
 
-
-Purpose: To parse a PDB file for any number of parameters and output into a xyz file
 
 Syntax: python pdbparser.py ~/Location/inputFile.pdb PARAMETER1 PARAMETER2
     *Replace Location with location of PDB file
