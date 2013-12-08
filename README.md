@@ -3,7 +3,7 @@ PDBParser
 Written: Connor Fourt
 Updated: December 8th 2013
 
-!!TL;DR: PDB in, XYZ out for some atoms in a protein.
+##TL;DR: PDB in, XYZ out for some atoms in a protein.##
 
 This is a simple script in python that reads in a PDB (Protein Database) file and outputs the positional data of specific atoms within a protein.
 
